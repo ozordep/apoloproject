@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.controller.CadastrarProdutosController">
+   <children>
+      <Text layoutX="719.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro de Produtos">
+         <font>
+            <Font name="Verdana" size="50.0" />
+         </font>
+      </Text>
+      <Label layoutX="466.0" layoutY="155.0" text="Representada:" />
+      <ComboBox fx:id="cbRepresentadas" layoutX="570.0" layoutY="150.0" prefHeight="31.0" prefWidth="384.0" />
+      <ComboBox fx:id="cbGrupos" layoutX="1107.0" layoutY="150.0" prefHeight="31.0" prefWidth="384.0" />
+      <TableView fx:id="tabelaProdutos" layoutX="245.0" layoutY="232.0" prefHeight="496.0" prefWidth="1431.0">
+         <columns>
+            <TableColumn fx:id="clmGrupos" prefWidth="218.99996948242188" text="Grupo" />
+            <TableColumn fx:id="clmCodProdutos" prefWidth="108.0" text="Cód. Produto" />
+            <TableColumn fx:id="clmNomeProdutos" prefWidth="472.0" text="Produto" />
+            <TableColumn fx:id="clmUnProdutos" prefWidth="71.0" text="Unidade" />
+            <TableColumn fx:id="clmQtdeProdutos" prefWidth="100.0" text="Qtde Caixa" />
+            <TableColumn fx:id="clmSaldoProdutos" prefWidth="65.0" text="Saldo" />
+            <TableColumn fx:id="clmPrecoClienteProdutos" prefWidth="104.0" text="Preço Cliente" />
+            <TableColumn fx:id="clmPrecoRevendedorProdutos" prefWidth="147.0" text="Preço Revendedor" />
+            <TableColumn fx:id="clmIcmsProdutos" text="ICMS" />
+            <TableColumn fx:id="clmIpiProdutos" prefWidth="64.0" text="IPI" />
+         </columns>
+      </TableView>
+      <Label layoutX="1053.0" layoutY="155.0" text="Grupo:" />
+      <TextField fx:id="txCodProd" layoutX="469.0" layoutY="757.0" prefHeight="31.0" prefWidth="94.0" promptText="Cód. Prod." />
+      <TextField fx:id="txProd" layoutX="570.0" layoutY="757.0" prefHeight="31.0" prefWidth="475.0" promptText="Produto" />
+      <TextField fx:id="txCxProd" layoutX="1053.0" layoutY="757.0" prefHeight="31.0" prefWidth="53.0" promptText="CX" />
+      <TextField fx:id="txQtdeProd" layoutX="1113.0" layoutY="757.0" prefHeight="31.0" prefWidth="74.0" promptText="Qtde" />
+      <TextField fx:id="txSaldoProd" layoutX="1194.0" layoutY="757.0" prefHeight="31.0" prefWidth="74.0" promptText="Saldo" />
+      <TextField fx:id="txPrecoCliente" layoutX="1274.0" layoutY="757.0" prefHeight="31.0" prefWidth="110.0" promptText="Preço Cliente" />
+      <TextField fx:id="txPrecoRevend" layoutX="1393.0" layoutY="757.0" prefHeight="31.0" prefWidth="120.0" promptText="Preço Revend" />
+      <TextField fx:id="txIcmsProd" layoutX="1522.0" layoutY="757.0" prefHeight="31.0" prefWidth="74.0" promptText="ICMS" />
+      <TextField fx:id="txIpiProd" layoutX="1602.0" layoutY="757.0" prefHeight="31.0" prefWidth="74.0" promptText="IPI" />
+      <Button fx:id="btCadastrar" layoutX="1061.0" layoutY="834.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="151.0" text="Cadastrar Produto">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btDeletar" layoutX="1238.0" layoutY="834.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="136.0" text="Deletar Produto">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btAtualizar" layoutX="1398.0" layoutY="834.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="129.0" text="Atualizar" />
+      <Button fx:id="btCancelar" layoutX="1580.0" layoutY="834.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="96.0" text="Cancelar" />
+      <Text layoutX="296.0" layoutY="778.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Novo Produto:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

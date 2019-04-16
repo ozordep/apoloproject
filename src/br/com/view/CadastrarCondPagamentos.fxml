@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="br.com.controller.CadastrarCondPagamentosController">
+   <children>
+      <Label layoutX="1101.0" layoutY="240.0" text="Cond. Pgto:" />
+      <Text layoutX="565.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro de Cond. Pagamentos">
+         <font>
+            <Font name="Verdana" size="50.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txNomeCondPgto" layoutX="1186.0" layoutY="235.0" prefHeight="31.0" prefWidth="168.0" promptText="Digite a Cond. Pgto ..." />
+      <Button fx:id="btCadastrar" layoutX="1212.0" layoutY="299.0" mnemonicParsing="false" prefHeight="114.0" prefWidth="143.0" text="Cadastrar">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btCancelar" layoutX="1212.0" layoutY="720.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="143.0" text="Cancelar" />
+      <TableView fx:id="tabelaCondPgto" layoutX="565.0" layoutY="197.0" prefHeight="690.0" prefWidth="526.0">
+         <columns>
+            <TableColumn fx:id="clmCodCondPgto" prefWidth="108.0" text="Cód." />
+            <TableColumn fx:id="clmCondPgts" prefWidth="416.0" text="Cond. Pagamentos" />
+         </columns>
+      </TableView>
+      <Button fx:id="btDeletarCondPgto" layoutX="1212.0" layoutY="429.0" mnemonicParsing="false" prefHeight="114.0" prefWidth="143.0" text="Deletar">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btAtualizar" layoutX="1212.0" layoutY="561.0" mnemonicParsing="false" prefHeight="114.0" prefWidth="143.0" text="Atualizar" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.com.controller.ListarAgendaController">
+   <children>
+      <Button fx:id="btCancelar" layoutX="1271.0" layoutY="335.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="143.0" text="Cancelar" />
+      <Text layoutX="693.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agenda">
+         <font>
+            <Font name="Verdana" size="50.0" />
+         </font>
+      </Text>
+      <Label layoutX="401.0" layoutY="156.0" text="Período:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker layoutX="311.0" layoutY="199.0" prefHeight="32.0" prefWidth="120.0" />
+      <DatePicker layoutX="479.0" layoutY="199.0" prefHeight="32.0" prefWidth="120.0" />
+      <Label layoutX="275.0" layoutY="206.0" text="De:" />
+      <Label layoutX="452.0" layoutY="206.0" text="à:" />
+      <ComboBox layoutX="321.0" layoutY="266.0" prefHeight="32.0" prefWidth="278.0" />
+      <Label layoutX="275.0" layoutY="274.0" text="Grupo:" />
+      <TableView layoutX="1061.0" layoutY="160.0" prefHeight="147.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="99.0" text="Data" />
+          <TableColumn prefWidth="100.0" text="Total" />
+        </columns>
+      </TableView>
+      <TableView layoutX="275.0" layoutY="335.0" prefHeight="395.0" prefWidth="986.0">
+        <columns>
+          <TableColumn prefWidth="311.0" text="Clientes" />
+          <TableColumn prefWidth="62.0" text="Data" />
+            <TableColumn prefWidth="61.0" text="Hora" />
+            <TableColumn prefWidth="176.0" text="Motivo" />
+            <TableColumn prefWidth="183.0" text="Obs." />
+            <TableColumn prefWidth="192.0" text="Follow-up" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

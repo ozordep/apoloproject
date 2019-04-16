@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.controller.CadastrarPedidosController">
+   <children>
+      <ImageView fitHeight="79.0" fitWidth="290.0" layoutX="837.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/Logo_Eter7.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="659.0" layoutY="127.0" text="Data Pedido:" />
+      <Label layoutX="402.0" layoutY="127.0" text="Pedido Nº:" />
+      <Label layoutX="1244.0" layoutY="127.0" text="Vendedor:" />
+      <Label layoutX="941.0" layoutY="127.0" text="Ordem de Compra:" />
+      <Label layoutX="402.0" layoutY="179.0" text="Representada:" />
+      <Label layoutX="739.0" layoutY="179.0" text="Cliente:" />
+      <Label layoutX="1174.0" layoutY="177.0" text="Comprador:" />
+      <Label layoutX="402.0" layoutY="227.0" text="Cond. Pgto:" />
+      <Label layoutX="656.0" layoutY="227.0" text="Frete:" />
+      <Label layoutX="824.0" layoutY="227.0" text="Transportadora:" />
+      <Label layoutX="845.0" layoutY="279.0" text="Redespacho:" />
+      <Label layoutX="402.0" layoutY="279.0" text="Representante:" />
+      <Label layoutX="402.0" layoutY="332.0" text="Local de Entrega:" />
+      <Label layoutX="402.0" layoutY="384.0" text="Local de Cobrança:" />
+      <TextField fx:id="txOrdCompra" layoutX="1077.0" layoutY="122.0" prefHeight="31.0" prefWidth="156.0" />
+      <TextField fx:id="txComprador" layoutX="1262.0" layoutY="172.0" prefHeight="31.0" prefWidth="280.0" />
+      <Label layoutX="1196.0" layoutY="227.0" text="DDD:" />
+      <Label layoutX="1316.0" layoutY="227.0" text="Telefone:" />
+      <TextField layoutX="1241.0" layoutY="222.0" prefHeight="31.0" prefWidth="65.0" />
+      <TextField layoutX="1386.0" layoutY="222.0" prefHeight="31.0" prefWidth="156.0" />
+      <Label layoutX="1196.0" layoutY="279.0" text="DDD:" />
+      <Label layoutX="1316.0" layoutY="279.0" text="Telefone:" />
+      <TextField layoutX="1241.0" layoutY="274.0" prefHeight="31.0" prefWidth="65.0" />
+      <TextField layoutX="1386.0" layoutY="274.0" prefHeight="31.0" prefWidth="156.0" />
+      <TextField fx:id="txEndEnt" layoutX="528.0" layoutY="327.0" prefHeight="31.0" prefWidth="1013.0" />
+      <TextField fx:id="txEndCob" layoutX="540.0" layoutY="380.0" prefHeight="31.0" prefWidth="1001.0" />
+      <TextArea fx:id="txObs" layoutX="501.0" layoutY="433.0" prefHeight="95.0" prefWidth="1040.0" />
+      <Label layoutX="402.0" layoutY="446.0" text="Observações:" />
+      <TableView layoutX="403.0" layoutY="552.0" prefHeight="233.0" prefWidth="1138.0">
+        <columns>
+          <TableColumn prefWidth="141.0" text="Cód. Produto" />
+          <TableColumn minWidth="0.0" prefWidth="376.0" text="Produto" />
+            <TableColumn prefWidth="47.0" text="Unid." />
+            <TableColumn prefWidth="91.0" text="Quantidade" />
+            <TableColumn prefWidth="73.0" text="Preço ($)" />
+            <TableColumn prefWidth="106.0" text="Preço + ICMS" />
+            <TableColumn prefWidth="60.0" text="ICMS" />
+            <TableColumn prefWidth="46.0" text="IPI" />
+            <TableColumn prefWidth="102.0" text="Total ($)" />
+            <TableColumn prefWidth="95.0" text="Entrega" />
+        </columns>
+      </TableView>
+      <Label layoutX="1244.0" layoutY="855.0" text="Valor Total:" />
+      <TextField layoutX="1328.0" layoutY="850.0" prefHeight="31.0" prefWidth="213.0" />
+      <Button layoutX="856.0" layoutY="901.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="151.0" text="Fechar" />
+      <Button layoutX="1033.0" layoutY="901.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="151.0" text="Excluir" />
+      <Button layoutX="1210.0" layoutY="901.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="151.0" text="Proforma" />
+      <Button layoutX="1390.0" layoutY="901.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="151.0" text="Proforma E-mail" />
+      <DatePicker fx:id="dtDataPed" layoutX="753.0" layoutY="122.0" prefHeight="31.0" prefWidth="178.0" promptText="Data do Pedido" />
+      <ComboBox layoutX="1328.0" layoutY="122.0" prefHeight="31.0" prefWidth="213.0" />
+      <Label layoutX="485.0" layoutY="177.0" prefHeight="21.0" prefWidth="247.0" text="Label" />
+      <Label layoutX="788.0" layoutY="175.0" prefHeight="21.0" prefWidth="368.0" text="Label" />
+      <ComboBox layoutX="490.0" layoutY="222.0" prefHeight="31.0" prefWidth="156.0" />
+      <ComboBox layoutX="702.0" layoutY="222.0" prefHeight="31.0" prefWidth="113.0" />
+      <ComboBox layoutX="939.0" layoutY="222.0" prefHeight="31.0" prefWidth="247.0" />
+      <ComboBox layoutX="511.0" layoutY="274.0" prefHeight="31.0" prefWidth="326.0" />
+      <ComboBox layoutX="939.0" layoutY="274.0" prefHeight="31.0" prefWidth="247.0" />
+      <TextField fx:id="txCodProd" layoutX="403.0" layoutY="805.0" prefHeight="31.0" prefWidth="136.0" promptText="Cód. Prod." />
+      <TextField fx:id="txCxProd" layoutX="924.0" layoutY="805.0" prefHeight="31.0" prefWidth="37.0" promptText="CX" />
+      <TextField fx:id="txQtdeProd" layoutX="969.0" layoutY="805.0" prefHeight="31.0" prefWidth="74.0" promptText="Qtde" />
+      <TextField fx:id="txPrecoCliente" layoutX="1052.0" layoutY="805.0" prefHeight="31.0" prefWidth="79.0" promptText="Preço ($)" />
+      <TextField fx:id="txIcmsProd" layoutX="1140.0" layoutY="805.0" prefHeight="31.0" prefWidth="94.0" promptText="Preço + ICMS" />
+      <TextField fx:id="txIpiProd" layoutX="1243.0" layoutY="805.0" prefHeight="31.0" prefWidth="61.0" promptText="ICMS" />
+      <TextField layoutX="1310.0" layoutY="805.0" prefHeight="31.0" prefWidth="35.0" promptText="IPI" />
+      <TextField layoutX="1352.0" layoutY="805.0" prefHeight="31.0" prefWidth="94.0" promptText="Total ($)" />
+      <TextField layoutX="1456.0" layoutY="805.0" prefHeight="31.0" prefWidth="85.0" />
+      <ComboBox layoutX="548.0" layoutY="805.0" prefHeight="31.0" prefWidth="368.0" />
+      <Label layoutX="485.0" layoutY="127.0" prefHeight="21.0" prefWidth="163.0" text="Label" />
+   </children>
+</AnchorPane>

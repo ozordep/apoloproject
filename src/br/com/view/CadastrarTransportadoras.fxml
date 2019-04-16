@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="867.0" prefWidth="1329.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.controller.CadastrarTransportadorasController">
+   <children>
+      <Text layoutX="567.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro de Transportadoras">
+         <font>
+            <Font name="Verdana" size="50.0" />
+         </font>
+      </Text>
+      <Label layoutX="567.0" layoutY="451.0" text="Nome:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txNome" layoutX="633.0" layoutY="449.0" prefHeight="31.0" prefWidth="550.0" promptText="Digite o Nome da Transportadora ..." />
+      <Label layoutX="567.0" layoutY="501.0" text="DDD:" />
+      <TextField fx:id="txDDD1" layoutX="604.0" layoutY="496.0" prefHeight="31.0" prefWidth="61.0" promptText="DDD" />
+      <Label layoutX="675.0" layoutY="501.0" text="Telefone:" />
+      <TextField fx:id="txTel1" layoutX="745.0" layoutY="496.0" prefHeight="31.0" prefWidth="438.0" promptText="Telefone ..." />
+      <Label layoutX="567.0" layoutY="537.0" text="DDD:" />
+      <TextField fx:id="txDDD2" layoutX="604.0" layoutY="532.0" prefHeight="31.0" prefWidth="61.0" promptText="DDD" />
+      <Label layoutX="675.0" layoutY="537.0" text="Telefone:" />
+      <TextField fx:id="txTel2" layoutX="745.0" layoutY="532.0" prefHeight="31.0" prefWidth="438.0" promptText="Telefone ..." />
+      <Button fx:id="btCadastrar" layoutX="1200.0" layoutY="409.0" mnemonicParsing="false" prefHeight="114.0" prefWidth="143.0" text="Cadastrar">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btCancelar" layoutX="1201.0" layoutY="540.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="143.0" text="Cancelar" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.controller.CadastrarClientesController">
+   <children>
+      <Text layoutX="749.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro de Clientes">
+         <font>
+            <Font name="Verdana" size="50.0" />
+         </font>
+      </Text>
+      <Label layoutX="395.0" layoutY="285.0" text="Razão Social:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txRazaoSocial" layoutX="514.0" layoutY="283.0" prefHeight="31.0" prefWidth="372.0" promptText="Digite a Razão Social do Cliente ..." />
+      <Label layoutX="895.0" layoutY="288.0" text="Nome Fantasia:" />
+      <TextField fx:id="txNomeFantasia" layoutX="1007.0" layoutY="283.0" prefHeight="31.0" prefWidth="365.0" promptText="Digite o Nome Fantasia do Cliente ..." />
+      <Label layoutX="395.0" layoutY="335.0" text="DDD:" />
+      <TextField fx:id="txDDD" layoutX="440.0" layoutY="330.0" prefHeight="31.0" prefWidth="61.0" promptText="DDD" />
+      <Label layoutX="511.0" layoutY="335.0" text="Telefone:" />
+      <TextField fx:id="txTelefone" layoutX="581.0" layoutY="330.0" prefHeight="31.0" prefWidth="178.0" promptText="Telefone ..." />
+      <Label layoutX="769.0" layoutY="335.0" text="Fax:" />
+      <TextField fx:id="txFax" layoutX="804.0" layoutY="330.0" prefHeight="31.0" prefWidth="122.0" promptText="Fax ..." />
+      <Label layoutX="935.0" layoutY="335.0" text="Contatos:" />
+      <TextField fx:id="txContatos" layoutX="1007.0" layoutY="330.0" prefHeight="31.0" prefWidth="365.0" promptText="Digite os Contatos do Cliente ..." />
+      <Label layoutX="394.0" layoutY="372.0" text="CNPJ:" />
+      <TextField fx:id="txCnpj" layoutX="440.0" layoutY="367.0" prefHeight="31.0" prefWidth="163.0" promptText="CNPJ" />
+      <Label layoutX="613.0" layoutY="372.0" text="I.E.:" />
+      <TextField fx:id="txIe" layoutX="644.0" layoutY="367.0" prefHeight="31.0" prefWidth="163.0" promptText="I.E." />
+      <Label layoutX="817.0" layoutY="372.0" text="E-mail:" />
+      <TextField fx:id="txEmail" layoutX="871.0" layoutY="367.0" prefHeight="31.0" prefWidth="501.0" promptText="Digite o E-mail do Cliente ..." />
+      <Label layoutX="396.0" layoutY="425.0" prefHeight="27.0" prefWidth="111.0" text="Endereço de">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="396.0" layoutY="446.0" prefHeight="27.0" prefWidth="122.0" text="Faturamento:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="551.0" layoutY="419.0" text="Endereço:" />
+      <TextField fx:id="txEndFat" layoutX="623.0" layoutY="414.0" prefHeight="31.0" prefWidth="521.0" promptText="Digite o Endereço de Faturamento do Cliente ..." />
+      <Label layoutX="1150.0" layoutY="419.0" text="País:" />
+      <TextField fx:id="txPaisFat" layoutX="1186.0" layoutY="414.0" promptText="País" />
+      <Label layoutX="551.0" layoutY="457.0" text="Bairro:" />
+      <TextField fx:id="txBairroFat" layoutX="623.0" layoutY="452.0" promptText="Bairro" />
+      <Label layoutX="817.0" layoutY="457.0" text="Cidade:" />
+      <TextField fx:id="txCidadeFat" layoutX="875.0" layoutY="452.0" promptText="Cidade" />
+      <Label layoutX="1068.0" layoutY="457.0" text="U.F.:" />
+      <TextField fx:id="txUfFat" layoutX="1101.0" layoutY="452.0" prefHeight="31.0" prefWidth="43.0" promptText="U.F." />
+      <Label layoutX="1151.0" layoutY="457.0" text="CEP:" />
+      <TextField fx:id="txCepFat" layoutX="1186.0" layoutY="452.0" prefHeight="31.0" prefWidth="187.0" promptText="CEP" />
+      <Label layoutX="396.0" layoutY="501.0" prefHeight="27.0" prefWidth="111.0" text="Endereço de">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="396.0" layoutY="522.0" prefHeight="27.0" prefWidth="122.0" text="Entrega:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="551.0" layoutY="495.0" text="Endereço:" />
+      <TextField fx:id="txEndEnt" layoutX="623.0" layoutY="490.0" prefHeight="31.0" prefWidth="521.0" promptText="Digite o Endereço de Entrega do Cliente ..." />
+      <Label layoutX="1150.0" layoutY="495.0" text="País:" />
+      <TextField fx:id="txPaisEnt" layoutX="1186.0" layoutY="490.0" promptText="País" />
+      <Label layoutX="551.0" layoutY="533.0" text="Bairro:" />
+      <TextField fx:id="txBairroEnt" layoutX="623.0" layoutY="528.0" promptText="Bairro" />
+      <Label layoutX="817.0" layoutY="533.0" text="Cidade:" />
+      <TextField fx:id="txCidadeEnt" layoutX="875.0" layoutY="528.0" promptText="Cidade" />
+      <Label layoutX="1068.0" layoutY="533.0" text="U.F.:" />
+      <TextField fx:id="txUfEnt" layoutX="1101.0" layoutY="528.0" prefHeight="31.0" prefWidth="43.0" promptText="U.F." />
+      <Label layoutX="1151.0" layoutY="533.0" text="CEP:" />
+      <TextField fx:id="txCepEnt" layoutX="1186.0" layoutY="528.0" prefHeight="31.0" prefWidth="187.0" promptText="CEP" />
+      <Button fx:id="btRepetir1" layoutX="1383.0" layoutY="506.0" mnemonicParsing="false" text="Repetir" />
+      <Label layoutX="396.0" layoutY="577.0" prefHeight="27.0" prefWidth="111.0" text="Endereço de">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="396.0" layoutY="598.0" prefHeight="27.0" prefWidth="122.0" text="Cobrança:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="551.0" layoutY="571.0" text="Endereço:" />
+      <TextField fx:id="txEndCob" layoutX="623.0" layoutY="566.0" prefHeight="31.0" prefWidth="521.0" promptText="Digite o Endereço de Cobrança do Cliente ..." />
+      <Label layoutX="1150.0" layoutY="571.0" text="País:" />
+      <TextField fx:id="txPaisCob" layoutX="1186.0" layoutY="566.0" promptText="País" />
+      <Label layoutX="551.0" layoutY="609.0" text="Bairro:" />
+      <TextField fx:id="txBairroCob" layoutX="623.0" layoutY="604.0" promptText="Bairro" />
+      <Label layoutX="817.0" layoutY="609.0" text="Cidade:" />
+      <TextField fx:id="txCidadeCob" layoutX="875.0" layoutY="604.0" promptText="Cidade" />
+      <Label layoutX="1068.0" layoutY="609.0" text="U.F.:" />
+      <TextField fx:id="txUfCob" layoutX="1101.0" layoutY="604.0" prefHeight="31.0" prefWidth="43.0" promptText="U.F." />
+      <Label layoutX="1151.0" layoutY="609.0" text="CEP:" />
+      <TextField fx:id="txCepCob" layoutX="1186.0" layoutY="604.0" prefHeight="31.0" prefWidth="187.0" promptText="CEP" />
+      <Button fx:id="btRepetir2" layoutX="1383.0" layoutY="583.0" mnemonicParsing="false" text="Repetir" />
+      <Button fx:id="btCadastrar" layoutX="1382.0" layoutY="283.0" mnemonicParsing="false" prefHeight="114.0" prefWidth="143.0" text="Cadastrar">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="btCancelar" layoutX="1383.0" layoutY="414.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="143.0" text="Cancelar" />
+   </children>
+</AnchorPane>
