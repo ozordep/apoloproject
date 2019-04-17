@@ -68,9 +68,16 @@ public class GerencialController implements Initializable {
                 logarListarAgenda();
             }
         });
-
+        
+        btRelatorios.setOnMouseClicked((MouseEvent e) -> {
+            gerarRelatorio();
+        });
+        
+        
+        
+        
+        
     }
-
     private void fecharTelaGerencial() {
         Gerencial.getStage().close();
     }
@@ -103,6 +110,12 @@ public class GerencialController implements Initializable {
             Logger.getLogger(GerencialController.class.getName()).log(Level.SEVERE, null, ex);
         }
         fecharTelaGerencial();
+    }
+    
+    private void gerarRelatorio(){
+    
+       
+        
     }
 
     /*

@@ -36,7 +36,15 @@ public class MatEnviadoDAO {
 
             cadastraSt = conexao.prepareStatement(sql);
             cadastraSt.setString(1, matenviado.getId_Clientes());
+
+            //PARA TRABALHAR COM TIPO 'STRING' - VANTAGEM: PERMITE DATA NO FORMATO: DIA/MÊS/ANO
             cadastraSt.setString(2, ((TextField) matenviado.getMat_Env_Data().getEditor()).getText());
+
+            // PARA TRABALHAR COM TIPO 'DATE':
+            // DatePicker dp = matenviado.getMat_Env_Data();
+            // LocalDate ld = dp.getValue();
+            // Date date = Date.valueOf(ld);
+            // cadastraSt.setDate(2, date);
             cadastraSt.setString(3, matenviado.getMat_Env_Desc());
             cadastraSt.executeUpdate();
             System.out.println("Envio de material cadastrado com sucesso!");
@@ -59,7 +67,7 @@ public class MatEnviadoDAO {
         Connection conexao = ModuloDeConexao.conector();
         ArrayList<MatEnviado> matenviado = new ArrayList<>();
 
-        String sql = "SELECT * FROM `Clientes_Mat_Enviados` WHERE Id_Clientes=?;";
+        String sql = "SELECT * FROM `Clientes_Mat_Enviados` WHERE Id_Clientes=? order by Mat_Env_Data desc;";
 
         try {
 //            conexao.setAutoCommit(false);
@@ -70,11 +78,17 @@ public class MatEnviadoDAO {
             resultado.setFetchSize(100);
             while (resultado.next()) {
                 MatEnviado matenv = new MatEnviado();
-//                DateTimeFormatter dtformatter = DateTimeFormatter.ofPattern("dd-MMM-yyyy");
-//                LocalDate dt = LocalDate.parse(resultado.getString("Mat_Env_Data"), dtformatter);
-//                Date date = Date.valueOf(dt);
-//                matenv.setMat_Env_Data2(date);
+
+                //PARA TRABALHAR COM TIPO 'STRING' - VANTAGEM: PERMITE DATA NO FORMATO: DIA/MÊS/ANO
                 matenv.setMat_Env_Data3(resultado.getString("Mat_Env_Data"));
+
+                // PARA TRABALHAR COM TIPO 'DATE':
+                // Date dateantes = resultado.getDate("Mat_Env_Data");
+                //  // String datestring = dateantes.toString();
+                // //DateTimeFormatter formatodesejado = DateTimeFormatter.ofPattern("yyyy/MM/dd"); // não faz o parse....
+                // // LocalDate localdate = LocalDate.parse(datestring, formatodesejado);
+                // // Date date = Date.valueOf(localdate);
+                // matenv.setMat_Env_Data2(dateantes);
                 matenv.setMat_Env_Desc(resultado.getString("Mat_Env_Desc"));
                 matenviado.add(matenv);
             }
