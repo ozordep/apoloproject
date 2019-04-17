@@ -155,11 +155,12 @@
                         <ComboBox fx:id="cbGrupos" layoutX="36.0" layoutY="46.0" prefHeight="32.0" prefWidth="243.0" promptText="TODOS" />
                         <Button fx:id="btIncluirGrupo" layoutX="289.0" layoutY="46.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="143.0" text="Incluir" />
                         <Label layoutX="36.0" layoutY="20.0" text="Escolha um Grupo:" />
-                        <TableView fx:id="tabelaCliGrupo" layoutX="36.0" layoutY="90.0" prefHeight="312.0" prefWidth="396.0">
+                        <TableView fx:id="tabelaCliGrupo" layoutX="36.0" layoutY="90.0" prefHeight="312.0" prefWidth="549.0">
                           <columns>
-                            <TableColumn fx:id="clmGrupos" prefWidth="395.0" style="-fx-alignment: CENTER;" text="Grupos" />
+                            <TableColumn fx:id="clmGrupos" prefWidth="548.0" style="-fx-alignment: CENTER;" text="Grupos" />
                           </columns>
                         </TableView>
+                        <Button layoutX="442.0" layoutY="46.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="143.0" text="Deletar" />
                      </children></AnchorPane>
               </content>
             </Tab>
@@ -191,7 +192,7 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="36.0" layoutY="90.0" prefHeight="312.0" prefWidth="536.0">
+                        <TableView fx:id="tabelaRefCom" layoutX="36.0" layoutY="90.0" prefHeight="312.0" prefWidth="536.0">
                            <columns>
                               <TableColumn prefWidth="305.0" text="Nome" />
                               <TableColumn minWidth="0.0" prefWidth="66.0" text="DDD" />
@@ -199,12 +200,12 @@
                            </columns>
                         </TableView>
                         <Label layoutX="36.0" layoutY="20.0" text="Nova Ref. Comercial:" />
-                        <TextField fx:id="txDDD1" layoutX="316.0" layoutY="47.0" prefHeight="31.0" prefWidth="47.0" promptText="DDD" />
-                        <TextField fx:id="txNomeFantasia1" layoutX="36.0" layoutY="47.0" prefHeight="31.0" prefWidth="270.0" promptText="Digite o Nome da Ref. Comercial ..." />
-                        <TextField fx:id="txDDD11" layoutX="373.0" layoutY="47.0" prefHeight="31.0" prefWidth="199.0" promptText="Digite o Telefone ..." />
-                        <Button layoutX="582.0" layoutY="178.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="105.0" text="Excluir" />
-                        <Button layoutX="582.0" layoutY="134.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="105.0" text="Alterar" />
-                        <Button layoutX="582.0" layoutY="90.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="105.0" text="Incluir" />
+                        <TextField fx:id="txDDDRefCom" layoutX="316.0" layoutY="47.0" prefHeight="31.0" prefWidth="47.0" promptText="DDD" />
+                        <TextField fx:id="txNomeRefCom" layoutX="36.0" layoutY="47.0" prefHeight="31.0" prefWidth="270.0" promptText="Digite o Nome da Ref. Comercial ..." />
+                        <TextField fx:id="txTelRefCom" layoutX="373.0" layoutY="47.0" prefHeight="31.0" prefWidth="199.0" promptText="Digite o Telefone ..." />
+                        <Button fx:id="btDelRefCom" layoutX="582.0" layoutY="178.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="105.0" text="Excluir" />
+                        <Button fx:id="btAltRefCom" layoutX="582.0" layoutY="134.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="105.0" text="Alterar" />
+                        <Button fx:id="btIncluirRefCom" layoutX="582.0" layoutY="90.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="105.0" text="Incluir" />
                         <Separator layoutX="700.0" layoutY="12.0" orientation="VERTICAL" prefHeight="402.0" prefWidth="8.0" />
                         <Button layoutX="1271.0" layoutY="89.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="105.0" text="Incluir" />
                         <Button layoutX="1271.0" layoutY="133.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="105.0" text="Alterar" />

@@ -70,10 +70,11 @@ public class MatEnviadoDAO {
             resultado.setFetchSize(100);
             while (resultado.next()) {
                 MatEnviado matenv = new MatEnviado();
-                DateTimeFormatter dtformatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-                LocalDate dt = LocalDate.parse(resultado.getString("Mat_Env_Data"), dtformatter);
-                Date date = Date.valueOf(dt);
-                matenv.setMat_Env_Data2(date);
+//                DateTimeFormatter dtformatter = DateTimeFormatter.ofPattern("dd-MMM-yyyy");
+//                LocalDate dt = LocalDate.parse(resultado.getString("Mat_Env_Data"), dtformatter);
+//                Date date = Date.valueOf(dt);
+//                matenv.setMat_Env_Data2(date);
+                matenv.setMat_Env_Data3(resultado.getString("Mat_Env_Data"));
                 matenv.setMat_Env_Desc(resultado.getString("Mat_Env_Desc"));
                 matenviado.add(matenv);
             }

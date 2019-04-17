@@ -162,6 +162,27 @@ public class ClienteCadastradoController implements Initializable {
 
     @FXML
     private TableView<Grupos> tabelaCliGrupo;
+    
+    @FXML
+    private TextField txNomeRefCom;
+
+    @FXML
+    private TextField txDDDRefCom;
+
+    @FXML
+    private TextField txTelRefCom;
+
+    @FXML
+    private Button btIncluirRefCom;
+
+    @FXML
+    private Button btAltRefCom;
+
+    @FXML
+    private Button btDelRefCom;
+
+    @FXML
+    private TableView<?> tabelaRefCom;
 
     private static Clientes c2;
     private Clientes selecionado;
@@ -361,9 +382,40 @@ public class ClienteCadastradoController implements Initializable {
             }
         }
     }
+    
+//    private void cadastrarClienteRefCom() {
+//
+//        String Id_Clientes = c2.getId_Clientes();
+//        String Nome_Ref_Com = txNomeRefCom.getText();
+//        String DDD_Ref_Com = txDDDRefCom.getText();
+//        String Tel_Ref_Com = txTelRefCom.getText();
+//
+//        ClientesGrupos cligru = new ClientesGrupos(Id_Clientes, Id_Grupos);
+//        ClientesGruposDAO dao = new ClientesGruposDAO();
+//
+//        if (Id_Grupos.equals(null)) {
+//            Alert alert = new Alert(Alert.AlertType.ERROR);
+//            alert.setTitle("Erro");
+//            alert.setHeaderText("Erro no Cadastro de Grupo em Cliente");
+//            alert.setContentText("Para o cadastro de um novo grupo em um cliente, PELO MENOS o grupo deve ser preenchido!");
+//            alert.showAndWait();
+//        } else {
+//            if (dao.cadastrarClienteGrupo(cligru)) {
+//                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+//                alert.setHeaderText("Cadastro de Grupo em cliente realizado com Sucesso!");
+//                alert.showAndWait();
+//                initTableClienteGrupo();
+//                initComboBoxClientesGrupos();
+//            } else {
+//                Alert alert = new Alert(Alert.AlertType.ERROR);
+//                alert.setHeaderText("Cadastro de Grupo em cliente NÃO Realizado!");
+//                alert.show();
+//            }
+//        }
+//    }
 
     private void initTableMatEnviado() {
-        clmData.setCellValueFactory(new PropertyValueFactory("Mat_Env_Data2"));
+        clmData.setCellValueFactory(new PropertyValueFactory("Mat_Env_Data3"));
         clmMatEnv.setCellValueFactory(new PropertyValueFactory("Mat_Env_Desc"));
         tabelaMatEnv.setItems(atualizarTabela());
     }

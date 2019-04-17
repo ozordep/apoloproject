@@ -10,6 +10,7 @@ public class MatEnviado {
     private DatePicker Mat_Env_Data;
     private Date Mat_Env_Data2;
     private String Mat_Env_Desc;
+    private String Mat_Env_Data3;
 
     public MatEnviado() {
     }
@@ -67,4 +68,13 @@ public class MatEnviado {
         this.Mat_Env_Desc = Mat_Env_Desc;
     }
 
+    public String getMat_Env_Data3() {
+        return Mat_Env_Data3;
+    }
+
+    public void setMat_Env_Data3(String Mat_Env_Data3) {
+        this.Mat_Env_Data3 = Mat_Env_Data3;
+    }
+
+    
 }
