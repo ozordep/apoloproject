@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.controller.RelatoriosController">
+   <children>
+      <Button fx:id="btnRelatorioClientes" layoutX="26.0" layoutY="53.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="217.0" text="RELATÓRIO CLIENTES">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnRelatorioRepresentadas" layoutX="26.0" layoutY="220.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="217.0" text="RELATÓRIO REPRESENTADAS">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnRelatorioProdutos" layoutX="338.0" layoutY="53.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="217.0" text="RELATÓRIO PRODUTOS">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnRelatorioTransportadoras" layoutX="338.0" layoutY="220.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="217.0" text="RELATÓRIO TRANSPORTADORAS">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="253.0" layoutY="361.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" text="VOLTAR">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

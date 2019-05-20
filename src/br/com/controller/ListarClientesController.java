@@ -18,6 +18,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import static javafx.scene.control.SelectionMode.MULTIPLE;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -100,6 +101,10 @@ public class ListarClientesController implements Initializable {
                 logarTelaGerencial();
             }
         });
+
+        tabelaListaClientes.getSelectionModel().setCellSelectionEnabled(true);
+        tabelaListaClientes.getStylesheets().add(
+                getClass().getResource("/br/com/styles/JMetroLightTheme.css").toExternalForm());
     }
 
     private void fecharTelaListarClientes() {

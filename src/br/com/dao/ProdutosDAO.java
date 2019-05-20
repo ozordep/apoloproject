@@ -74,6 +74,62 @@ public class ProdutosDAO {
             }
         }
     }
+    
+    public static void diminuirSaldo(Produtos produtos, int qtde){
+    
+        Connection conexao = ModuloDeConexao.conector();
+        PreparedStatement diminuiSaldoSt = null;
+        
+        String sql = "UPDATE Produtos set Produtos.Saldo_Produtos = (Produtos.Saldo_Produtos - ?) WHERE Produtos.Id_Produtos = ?;";
+        
+         try {
+            diminuiSaldoSt = conexao.prepareStatement(sql);
+            diminuiSaldoSt.setInt(1, qtde);
+            diminuiSaldoSt.setInt(2, produtos.getId_Produtos());
+            diminuiSaldoSt.executeUpdate();
+
+            System.out.println("Saldo ajustado com sucesso");
+
+        } catch (SQLException e) {
+            System.out.println("Erro ao ajustar saldo. Mensagem:" + e.getMessage());
+        } finally {
+            try {
+                diminuiSaldoSt.close();
+                conexao.close();
+            } catch (Throwable e) {
+                System.out.println("Erro Mensagem:" + e.getMessage());
+            }
+        }
+    
+    }
+    
+    public static void adicionarSaldo(Produtos produtos, int qtde){
+    
+        Connection conexao = ModuloDeConexao.conector();
+        PreparedStatement diminuiSaldoSt = null;
+        
+        String sql = "UPDATE Produtos set Produtos.Saldo_Produtos = (Produtos.Saldo_Produtos + ?) WHERE Produtos.Id_Produtos = ?;";
+        
+         try {
+            diminuiSaldoSt = conexao.prepareStatement(sql);
+            diminuiSaldoSt.setInt(1, qtde);
+            diminuiSaldoSt.setInt(2, produtos.getId_Produtos());
+            diminuiSaldoSt.executeUpdate();
+
+            System.out.println("Saldo ajustado com sucesso");
+
+        } catch (SQLException e) {
+            System.out.println("Erro ao ajustar saldo. Mensagem:" + e.getMessage());
+        } finally {
+            try {
+                diminuiSaldoSt.close();
+                conexao.close();
+            } catch (Throwable e) {
+                System.out.println("Erro Mensagem:" + e.getMessage());
+            }
+        }
+    
+    }
 
     public static void atualizarProduto(Produtos produtos) {
         Connection conexao = ModuloDeConexao.conector();
@@ -196,4 +252,44 @@ public class ProdutosDAO {
         }
         return produtos;
     }
+
+    public static List<Produtos> listarProdutoEstoque() {
+        Connection conexao = ModuloDeConexao.conector();
+
+        List<Produtos> produtos = new ArrayList<>();
+
+        String sql = "SELECT Produtos.Cod_Produtos, Produtos.Nome_Produtos, Produtos.Id_Representadas,"
+                + " Produtos.Qtde_Cx_Produtos, Produtos.Saldo_Produtos from Produtos;";
+
+        try {
+            //     conexao.setAutoCommit(false);
+            PreparedStatement consultaSt = conexao.prepareStatement(sql);
+            consultaSt.setFetchSize(200);
+            ResultSet resultado = consultaSt.executeQuery();
+            while (resultado.next()) {
+                Produtos produto = new Produtos();
+                produto.setCod_Produtos(resultado.getString("Cod_Produtos"));
+                produto.setNome_Produtos(resultado.getString("Nome_Produtos"));
+                produto.setQtde_Cx_Produtos(resultado.getString("Qtde_Cx_Produtos"));
+                produto.setSaldo_Produtos(resultado.getString("Saldo_Produtos"));
+                produto.setId_Representadas(resultado.getString("Id_Representadas"));
+                produtos.add(produto);
+            }
+
+            consultaSt.close();
+            resultado.close();
+
+        } catch (SQLException e) {
+            return null;
+        } finally {
+            try {
+
+                conexao.close();
+            } catch (Throwable e) {
+                System.out.println("Erro ao fechar operação de atualização de produtos. Mensagem:" + e.getMessage());
+            }
+        }
+        return produtos;
+    }
+
 }

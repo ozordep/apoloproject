@@ -15,7 +15,7 @@ public class ClientesDAO {
         Connection conexao = ModuloDeConexao.conector();
         PreparedStatement cadastraSt = null;
 
-        String sql = "insert into Clientes(RazaoSocial_Clientes, NomeFantasia_Clientes, DDD_Clientes, Telefone_Clientes, Fax_Clientes, Contatos_Clientes, Cnpj_Clientes, Ie_Clientes, Email_Clientes, EndFat_Clientes, PaisFat_Clientes, BairroFat_Clientes, CidadeFat_Clientes, UfFat_Clientes, CepFat_Clientes, EndEnt_Clientes, PaisEnt_Clientes, BairroEnt_Clientes, CidadeEnt_Clientes, UfEnt_Clientes, CepEnt_Clientes, EndCob_Clientes, PaisCob_Clientes, BairroCob_Clientes, CidadeCob_Clientes, UfCob_Clientes, CepCob_Clientes) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+        String sql = "call cadClientes (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
         try {
 

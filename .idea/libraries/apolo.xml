@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="apolo">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/apolo.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

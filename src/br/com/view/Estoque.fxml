@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="1029.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.controller.EstoqueController">
+   <children>
+      <Text layoutX="372.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ESTOQUE">
+         <font>
+            <Font name="Verdana" size="50.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tabelaProdutos" layoutX="14.0" layoutY="205.0" prefHeight="349.0" prefWidth="1006.0">
+         <columns>
+            <TableColumn fx:id="clmCodProdutos" prefWidth="144.0" text="Cód. Produto" />
+            <TableColumn fx:id="clmNomeProdutos" prefWidth="257.0" text="Produto" />
+            <TableColumn fx:id="clmUnProdutos" prefWidth="206.0" text="Unidade" />
+            <TableColumn fx:id="clmQtdeProdutos" prefWidth="231.0" text="Qtde Caixa" />
+            <TableColumn fx:id="clmSaldoProdutos" prefWidth="167.0" text="Saldo" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnAdicionarSaldo" layoutX="320.0" layoutY="567.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="174.0" text="Adicionar saldo" />
+      <Button fx:id="btnSubtrairSaldo" layoutX="673.0" layoutY="567.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="174.0" text="Subtrair saldo" />
+   </children>
+</AnchorPane>
