@@ -157,39 +157,5 @@ public class GerencialController implements Initializable {
     
     
 
-//    private void gerarRelatorio() {
-//
-//        try {
-//            JasperDesign jd = JRXmlLoader.load("E:\\TCC Desktop - oficial\\apolo\\src\\br\\com\\reports\\apoloteste.jrxml");
-//            String sql = "SELECT"
-//                    + "     Clientes.Id_Clientes AS Clientes_Id_Clientes,"
-//                    + "     Clientes.RazaoSocial_Clientes AS Clientes_RazaoSocial_Clientes,"
-//                    + "     Clientes.NomeFantasia_Clientes AS Clientes_NomeFantasia_Clientes,"
-//                    + "     Clientes.Telefone_Clientes AS Clientes_Telefone_Clientes,"
-//                    + "     Clientes.CidadeFat_Clientes AS Clientes_CidadeFat_Clientes,"
-//                    + "     Clientes.UfFat_Clientes AS Clientes_UfFat_Clientes "
-//                    + "FROM"
-//                    + "     Clientes Clientes";
-//            System.out.println(sql);
-//            JRDesignQuery newQuery = new JRDesignQuery();
-//            newQuery.setText(sql);
-//            jd.setQuery(newQuery);
-//            JasperReport jr = JasperCompileManager.compileReport(jd);
-//            JasperPrint jp = JasperFillManager.fillReport(jr, null, conector());
-//            JasperViewer.viewReport(jp);
-//
-//        } catch (Exception e) {
-//            System.out.println(e);
-//        }
-//
-//    }
 
-    /*
-    public void listarClientes() {
-        //ClientesDAO clidao = new ClientesDAO();
-        List<Clientes> clientes = new ClientesDAO().listarClientes();
-        for (int x = 0; x < clientes.size(); x++) {
-            clientes.get(x).listarClientes();
-        }
-    }*/
 }
